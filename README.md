@@ -1,6 +1,6 @@
 ## GAN-Scanner, a GAN Image Detector 
 
-<img src="./seed39942_300_95.jpg" height="250"><img src="./seed48305_640_80.jpg" height="250"> <img src="./seed48321_384_95.jpg" height="250">
+<img src="./data/seed39942_300_95.jpg" height="280"><img src="./data/seed48305_640_80.jpg" height="280"> <img src="./data/seed48321_384_95.jpg" height="280">
 
 This page describes a GAN image detector developed at Computer Vision Lab, University of Maryland, College Park.
 
@@ -25,7 +25,7 @@ The trained classifier is shown, in the graph below,  under two configurations. 
 
 
 ### 
-<img src="./GAN_CLASSIFIER.png" width="300">
+<img src="./data/GAN_CLASSIFIER.png" width="300">
 
 ## Open-World Detection Accuracy 
 Several targeted experiments were conducted to determine how GAN-Scanner performs in an open-world environment. Three datasets of real images were used, to assess performance under different/unknown data distributions. 
