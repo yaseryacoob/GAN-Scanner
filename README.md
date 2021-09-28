@@ -9,15 +9,19 @@ The classifier was trained on a balanced dataset of 81400 images, 40800 authenti
 
 ## Request Code or Data 
 
-Please fill out the [Form](https://docs.google.com/forms/d/1NtHP5eo25rceqnirmTmfdJ3e6nltyu0wNIuNBrFk29I/prefill) after reading and agreeing our License Agreement. For any questions or feedback, please e-mail yaser@umd.edu with the subject [Question about the GAN-Scnanner]. Please note that access will granted to image-consuming entities for public interest.Individuals (including students and researchers), re-packagers, as well as opaque entities will not be granted access.
+Please fill out the [Form](https://docs.google.com/forms/d/e/1FAIpQLSd-q3XZmHlvPxZOP8nwFi8Q8cl4epx8HyWrx5ApOszj8g-wnA/viewform) after reading and agreeing our License Agreement. For any questions or feedback, please e-mail yaser@umd.edu with the subject [Question about the GAN-Scnanner]. Please note that access will granted to image-consuming entities for public interest.Individuals (including students and researchers), re-packagers, as well as opaque entities will not be granted access.
 
 <font size="-4">
 
 
 </font>
+## ROC of the Classifier
 
+The trained classifier is show under two configurations in the graph below. The full face configuration assumes that the face is fully visible with a reasonable background area. The second assumed that the face may be partially obsecured, either due to photo composition or partial occlusioni (for example in a multi-person scene). The performance charactersitics deteriorate sightly. From AUC of 0.91 to 0.88. 
+### 
+<img src="./GAN_CLASSIFIER.png">
 
-## Detection Accuracy 
+## Open-World Detection Accuracy 
 
 | DATASET  | Type  | Data Size | Detection Accuracy1| Detection Accurcy2 | Notes |
 | :------------ |:---------------|:-----|:-----|:-----|:-------|
