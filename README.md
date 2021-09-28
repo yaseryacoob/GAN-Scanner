@@ -6,26 +6,30 @@
 
 The classifier was trained on a balanced dataset of 81400 images, 40800 authentic (FFHQ+CELEBHQ) and 40800 GAN generated (5100 from each of StyleGAN2-raw plus three compressions levels, 10,25,50, StyleGAN-ADA, StyleGAN Distillation and SAM.
 
+
+## Request Code or Data 
+
+Please fill out the [Form](https://docs.google.com/forms/d/1NtHP5eo25rceqnirmTmfdJ3e6nltyu0wNIuNBrFk29I/prefill) after reading and agreeing our License Agreement. For any questions or feedback, please e-mail yaser@umd.edu with the subject [Question about the GAN-Scnanner]. Please note that access will granted to image-consuming entities for public interest.Individuals (including students and researchers), re-packagers, as well as opaque entities will not be granted access.
+
 <font size="-4">
 
-semafor-test-harness probe sri-umd-yyimagesplicegsrnet  /home/yaser/semafor/datalake/default/ag/faf8dcdde7744173f1eb54b26802d2f1ffd8ec3f-ag.json
+
 </font>
 
 
 ## Detection Accuracy 
 
-| DATASET  | Type  | Data Size | Detection Accuracy | Notes |
-| :------------ |:---------------|:-----|:-----|:-----|
-| [MFC19-20](https://mfc.nist.gov/#pills-overview)  | Real Data | 8K | 91% | Real-world diversity|
-| [UMD-BLEND](https://mfc.nist.gov/#pills-overview)  | Real Data | 8K | 91% | Real-world diversity|
-| [FFHQ-Extention](https://mfc.nist.gov/#pills-overview)  | Real Data | 8K | 91% | Real-world diversity|
-| [SAM](https://github.com/yuval-alaluf/SAM) | StyleGAN2 |14K        |   97% |  StyleGAN2-latentspace|
-| [NAVIGAN](https://github.com/yandex-research/navigan) | StyleGAN2 | 8K | 99%|StyleGAN2-latentspace|
-| [StyleMixing](https://arxiv.org/abs/2003.03581)| 93K|61%| STyleGAN2|
-| [StyleGAN-ADA/CELEBHQ](https://github.com/NVlabs/stylegan2-ada) | StyleGAN2        | 5.3K | 65% |StyleGAN2-varient|
-| [MobileStyleGAN](https://arxiv.org/abs/2104.04767)| StyleGAN2-reduced| 5K | 42% |StyleGAN2-varient|
-| [CIPS](https://github.com/saic-mdal/CIPS)|GAN|3.5K|80%|Non-CNN, positional Encoding|
-| [StyleGAN3](https://nvlabs.github.io/alias-free-gan/)|Detection|Images|Image returned as Evidence|Missing AAG|
+| DATASET  | Type  | Data Size | Detection Accuracy1| Detection Accurcy2 | Notes |
+| :------------ |:---------------|:-----|:-----|:-----|:-------|
+| [MFC19-20](https://mfc.nist.gov/#pills-overview)  | Real Data | 8K | 91%|91% | Real-world diversity|
+| [UMD-BLEND](https://mfc.nist.gov/#pills-overview)  | Real Data | 8K | 91%|91% | Real-world diversity|
+| [FFHQ-Extension](https://mfc.nist.gov/#pills-overview)  | Real Data | 8K | 91%|91% | Real-world diversity|
+| [SAM](https://github.com/yuval-alaluf/SAM) | StyleGAN2 |14K        |   97%|91% |  StyleGAN2-latentspace|
+| [NAVIGAN](https://github.com/yandex-research/navigan) | StyleGAN2 | 8K | 99%|91%|StyleGAN2-latentspace|
+| [StyleMixing](https://arxiv.org/abs/2003.03581)| StyleGAN2+Pix2pix | 93K|61%|91%| StyleGAN2+Pix2Pix|
+| [MobileStyleGAN](https://arxiv.org/abs/2104.04767)| StyleGAN2-reduced| 5K | 42%|91% |StyleGAN2-varient|
+| [CIPS](https://github.com/saic-mdal/CIPS)|GAN|7K|80%|91%|Non-CNN, positional Encoding|
+| [StyleGAN3](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|||||
 
 
 
@@ -45,8 +49,8 @@ semafor-test-harness probe sri-umd-yyimagesplicegsrnet  /home/yaser/semafor/data
 5. [MobileStyleGAN: A Lightweight Convolutional Neural Network for High-Fidelity Image Synthesis](https://arxiv.org/abs/2104.04767)
 6. [Training Generative Adversarial Networks with Limited Data](https://github.com/NVlabs/stylegan2-ada)
 7. [Image Generators with Conditionally-Independent Pixel Synthesis](https://github.com/saic-mdal/CIPS)
-9. [Navigating the GAN Parameter Space for Semantic Image Editing, CVPR 2021] (https://github.com/yandex-research/navigan)
-10. [Alias-Free Generative Adversarial Networks](https://nvlabs.github.io/alias-free-gan/)
+8. [Navigating the GAN Parameter Space for Semantic Image Editing, CVPR 2021] (https://github.com/yandex-research/navigan)
+9. [Alias-Free Generative Adversarial Networks](https://nvlabs.github.io/alias-free-gan/)
 
 
 ### Latentgan StyleGAN2
