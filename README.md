@@ -1,6 +1,6 @@
 ## GAN-Scanner, a GAN Image Detector 
 
-<img src="./seed39942_300_95.jpg" height="300"><img src="./seed48305_640_80.jpg" height="300">
+<img src="./seed39942_300_95.jpg" height="250"><img src="./seed48305_640_80.jpg" height="250"> <img src="./seed48321_384_95.jpg" height="250">
 
 This page describes a GAN image detector developed at Computer Vision Lab, University of Maryland, College Park.
 
