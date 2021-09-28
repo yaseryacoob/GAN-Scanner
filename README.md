@@ -1,19 +1,21 @@
 ## GAN-Scanner, a GAN Image Detector 
 
+<img src="./seed39942_300_95.jpg" height="300"><img src="./seed48305_640_80.jpg" height="300">
+
 This page describes a GAN image detector developed at Computer Vision Lab, University of Maryland, College Park.
 
 ## Description
 
 This detector is designed for faces. It works best at medium and high resolution images (128x128 and higher).
 
-This detector employs StyleGAN2 inversion as the core-idea for detection. The hypothesis is that a good inversion of a face is highly like to be a GAN generated image, while a real-image is slightly less invertable. Multiple metrics are used to compute a feature vector that reflects the outome of the inversion. This computed feature is classified (0 to 1.0, where 0 is likely a GAN image image and 1.0 is an authetic image) and an evidence image is provided to help a human make determine if the processing is credible.
+This detector employs StyleGAN2 inversion as the core-idea for detection. The hypothesis is that a perfect inversion of a face is highly likely to be a GAN generated image, while a real-image is slightly less invertable. Multiple metrics are used to compute a feature vector that reflects the outome of the inversion. This computed feature is classified (0 to 1.0, where 0 is likely a GAN image image and 1.0 is an authentic image). An evidence image is provided to help a human make determine if the processing is credible.
 
-The classifier was trained on a balanced dataset of 81400 images, 40800 authentic (FFHQ+CELEBHQ) and 40800 GAN generated (5100 from each of StyleGAN2-raw plus three compressions levels, 10,25,50, StyleGAN-ADA, inversions of (StyleGAN2 and CELEBHQ), StyleGAN2 Distillation and SAM (see references at the bottom).
+The classifier was trained on a balanced dataset of 81400 images, 40800 authentic (FFHQ+CELEBHQ) and 40800 GAN generated (5100 from each of StyleGAN2-raw plus three compressions levels, 10,25,50, StyleGAN-ADA (inversions of StyleGAN2 and CELEBHQ), StyleGAN2 Distillation and SAM (see references at the bottom).
 
 
 ## Request Code or Data 
 
-Please fill out the [Form](https://docs.google.com/forms/d/e/1FAIpQLSd-q3XZmHlvPxZOP8nwFi8Q8cl4epx8HyWrx5ApOszj8g-wnA/viewform) if you are interested in the software.  Please note that access will be granted to "image-consuming entities for public interest".Individuals (including students and researchers), re-packagers, as well as opaque entities will not be granted access. 
+Please fill out the [Form](https://docs.google.com/forms/d/e/1FAIpQLSd-q3XZmHlvPxZOP8nwFi8Q8cl4epx8HyWrx5ApOszj8g-wnA/viewform) if you are interested in the software.  Please note that access will be granted to "image-consuming entities for public interest". Individuals (including students and researchers), re-packagers, as well as opaque entities will not be granted access. 
 
 For any questions or feedback, please e-mail yaser@umd.edu with the subject [Question about the GAN-Scnanner].
 
@@ -23,20 +25,20 @@ The trained classifier is shown, in the graph below,  under two configurations. 
 
 
 ### 
-<img src="./GAN_CLASSIFIER.png">
+<img src="./GAN_CLASSIFIER.png" width="300">
 
 ## Open-World Detection Accuracy 
-Several targeted experiments were conducted to determine how GAN-Scanner performs in an open-world environment. Three datasets of real images were used, to assess perfoemnace under different unknown distributions. 
+Several targeted experiments were conducted to determine how GAN-Scanner performs in an open-world environment. Three datasets of real images were used, to assess performance under different/unknown data distributions. 
 [MFC 19-20](https://mfc.nist.gov/#pills-overview) is NIST collected dataset for Forenisc Analysis. UMD-BLEND is derived from over 50K images, consisting of IARPA JANUS-CS3 Face Recogniton dataset,
-[FaceBook Fairness Dataset] (https://ai.facebook.com/blog/shedding-light-on-fairness-in-ai-with-a-new-data-set)
-Boston and Marine Corp Marathons, flicker-based Dataset (UMD), and Women's March in DC FLicker Datasets (UMD). Finally, FFHQ-Extension is a 27K images unreleased FFHQ from Nvidia's original collection.
+[FaceBook Fairness Dataset](https://ai.facebook.com/blog/shedding-light-on-fairness-in-ai-with-a-new-data-set),
+Boston and Marine Corp Marathons, flicker-based Dataset (UMD), and Women's March in DC Flicker Dataset (UMD). Finally, FFHQ-Extension is a 27K images unreleased FFHQ-sourced from Nvidia's original collection (these were released for this specific detection task).
 
-The GAN generator varied, between  StyleGAN2-related algorithms (these strongly operate in the same latent space), mixed and related variants of StyleGAN2,  non CNN architectures as well as StyleGAN3.
+The GAN generators varied, between  StyleGAN2-related algorithms (these strongly operate in the same latent space), mixed or significant variants of StyleGAN2,  non CNN architectures as well as StyleGAN3.
 The following detection accuracy reflects open-world performance of GAN-Scanner.
 
 
-| DATASET  | Type  | Data Size | Detection Accuracy1| Detection Accurcy2 | Notes |
-| :------------ |:---------------|:-----|:-----|:-----|:-------|
+| DATASET  | Type  | Data Size | Detection Accuracy1| Detection Accuracy2 | Notes |
+| :------------ |:------------------|:----|:----|:----|:--------|
 | [MFC19-20](https://mfc.nist.gov/#pills-overview)  | Real Data | 7.6K | 95.1%|93.3% | Real-world diversity|
 | [UMD-BLEND](https://mfc.nist.gov/#pills-overview)  | Real Data | 21K | 93.6%|85.0% | Real-world diversity|
 | [FFHQ-Extension](https://mfc.nist.gov/#pills-overview)  | Real Data | 27K | xx%|xx% | Real-world diversity|
@@ -50,7 +52,7 @@ The following detection accuracy reflects open-world performance of GAN-Scanner.
 
 
 
-## Take into account:
+## Notes
 
 1. This is Research Code, there is no liability for use or guarantee of performance 
 2. A Docker-based deployment (currently tested on linux based systems)
