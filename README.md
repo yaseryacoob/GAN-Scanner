@@ -17,7 +17,7 @@ The classifier was trained on a balanced dataset of 81400 images, 40800 authenti
 
 ## Request Code or Data 
 
-Please fill out the [Form](https://docs.google.com/forms/d/e/1FAIpQLSd-q3XZmHlvPxZOP8nwFi8Q8cl4epx8HyWrx5ApOszj8g-wnA/viewform) if you are interested in the software.  Please note that access will be granted 
+Please fill out the [Form](https://docs.google.com/forms/d/e/1FAIpQLSdPSt9T_FA4HY26fB5xPgGKRIhPEceK6s47cYf82fSqQOcmeg/viewform) if you are interested in the software.  Please note that access will be granted 
 to **"image-consuming entities for public interest".** Individuals (including students and researchers), re-packagers, as well as opaque entities will **not**  be granted access. 
 
 For any questions or feedback, please e-mail yaser@umd.edu with the subject [Question about the GAN-Scanner].
