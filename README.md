@@ -64,7 +64,7 @@ ROC is an important tool for reflecting the overall classifier performance. We p
 The first authentic image dataset is UMD-Blend and the second is FFHQ-Extension. The UMD-Blend is a more diverse dataset, while the FFHQ-Extension shares the image distribution that inspired Nvidia's StyleGAN frameworks.
 In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and comppressed versions of these configurations. 
 
-<img src="./data/UMD_ROC.png" width="420"> <img src="./data/FFHQ-EXT_ROC.png" width="420">
+<img src="./data/UMD_ROC.png" width="410"> <img src="./data/FFHQ-EXT_ROC.png" width="410">
 
 
 
@@ -84,7 +84,7 @@ In each case we compare the performance with respect to 4 StyleGAN3 datasets, na
 5. [MobileStyleGAN: A Lightweight Convolutional Neural Network for High-Fidelity Image Synthesis](https://arxiv.org/abs/2104.04767)
 6. [Training Generative Adversarial Networks with Limited Data](https://github.com/NVlabs/stylegan2-ada)
 7. [Image Generators with Conditionally-Independent Pixel Synthesis](https://github.com/saic-mdal/CIPS)
-8. [Navigating the GAN Parameter Space for Semantic Image Editing, CVPR 2021] (https://github.com/yandex-research/navigan)
+8. [Navigating the GAN Parameter Space for Semantic Image Editing, CVPR 2021](https://github.com/yandex-research/navigan)
 9. [Alias-Free Generative Adversarial Networks](https://nvlabs.github.io/alias-free-gan/)
 
 
