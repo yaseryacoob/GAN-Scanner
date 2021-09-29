@@ -41,7 +41,7 @@ The GAN generators varied, between  StyleGAN2-related algorithms (these strongly
 The following detection accuracy reflects open-world performance of GAN-Scanner. Note that for StyleGAN3 we provide 4 different test results that correspond to two configurations provided by Nvidia, config-r and config-t.
 For each we provide a no-compression performance as well as an unknown rescaled and compressed data that simulates real-world and/or adversarial attacks.
 
-Two accuracies are reported, ** Accuracy-F ** and ** Accuracy-P ** . The former is for a Full-face classifier, and the latter is for Partial (or boundary) face classifier. The results suggest that the Partial Face classifer is preferrable for overall performance.
+Two accuracies are reported, **Accuracy-F** and **Accuracy-P** . The former is for a Full-face classifier, and the latter is for Partial (or boundary) face classifier. The results suggest that the Partial Face classifer is preferrable for overall performance.
 
 
 | DATASET  | Type  | Data Size | Detection Accuracy-F| Detection Accuracy-P | Notes |
@@ -72,7 +72,7 @@ In each case we compare the performance with respect to 4 StyleGAN3 datasets, na
 
 1. This is Research Code, there is no liability for use or guarantee of performance 
 2. A Docker-based deployment (currently tested on linux based systems) is most suitable. It supports processing single or folders of images.
-3. This Software requires access to ** GPU ** in the computing environment. 
+3. This Software requires access to **GPU** in the computing environment. 
 4. There are incremental improvements beyond what is described. The purpose of this page is to describe how the open-world GAN-Scanner operated upon being frozen in early 2021.
 
 
