@@ -1,4 +1,4 @@
-## GAN-Scanner: A Detector for Face of StyleGAN+
+## GAN-Scanner: A Detector for Faces of StyleGAN+
 
 <img src="./data/seed39942_300_95.jpg" height="270"><img src="./data/seed48305_640_80.jpg" height="270"> <img src="./data/seed48321_384_95.jpg" height="270">
 
