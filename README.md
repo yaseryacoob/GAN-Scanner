@@ -1,8 +1,8 @@
-## GAN-Scanner, a StyleGAN+ Image Detector 
+## GAN-Scanner- A Detector for Face Images StyleGAN+
 
 <img src="./data/seed39942_300_95.jpg" height="270"><img src="./data/seed48305_640_80.jpg" height="270"> <img src="./data/seed48321_384_95.jpg" height="270">
 
-This page describes a StyleGAN+ image detector developed by [Yaser Yacoob](http://users.umiacs.umd.edu/~yaser) at Computer Vision Lab, University of Maryland, College Park.
+This page describes a %md ###  <span style="color:blue">StyleGAN+</span>  StyleGAN+ image detector developed by [Yaser Yacoob](http://users.umiacs.umd.edu/~yaser) at Computer Vision Lab, University of Maryland, College Park.
 
 ## Description
 
@@ -37,7 +37,7 @@ Finally, FFHQ-Extension is a 27K images unreleased FFHQ-sourced from Nvidia's or
 
 The GAN generators varied, between  StyleGAN2-related algorithms (these strongly operate in the same latent space), mixed or significant variants of StyleGAN2,  non CNN architectures as well as StyleGAN3.
 The following detection accuracy reflects open-world performance of GAN-Scanner. Note that for StyleGAN3 we provide 4 different test results that correspond to two configurations provided by Nvidia, config-r and config-t.
-For each we provide a no-compression performance as well as an unknown compressed/rescaled data that simulates real-world and/or adversarial attacks.
+For each we provide a no-compression performance as well as an unknown rescaled and compressed data that simulates real-world and/or adversarial attacks.
 
 
 
@@ -53,7 +53,7 @@ For each we provide a no-compression performance as well as an unknown compresse
 | [CIPS](https://github.com/saic-mdal/CIPS)|GAN|7K|63.2%|76.5%|Non-CNN, positional Encoding|
 | [StyleGAN3-config-r](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|42.1%|82.8%| StyleGAN2+Positional Encoding|
 | [StyleGAN3-config-t](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|42.1%|82.8%| StyleGAN2+Positional Encoding|
-| [StyleGAN3-config-r_rescal-compression](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|42.1%|66.6%| StyleGAN2+Positional Encoding|
+| [StyleGAN3-config-r_rescale-compression](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|42.1%|66.6%| StyleGAN2+Positional Encoding|
 | [StyleGAN3-config-t_rescale-compression](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|43.2%|65.2%|StyleGAN2+Positional Encoding|
 
 ## Open-World ROC
@@ -61,7 +61,7 @@ ROC is an important tool for reflecting the overall classifier performance. We p
 The first authentic image dataset is UMD-Blend and the second is FFHQ-Extension. The UMD-Blend is more diverse dataset, while the FFHQ-Extension shares the image distribution that inspired Nvidia's StyleGAN frameworks.
 In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and comppressed versions these configurations. 
 
-<img src="./data/UMD_ROC.png" width="300"> <img src="./data/FFHQ-EXT_ROC.png" width="300">
+<img src="./data/UMD_ROC.png" width="400"> <img src="./data/FFHQ-EXT_ROC.png" width="400">
 
 
 
