@@ -64,6 +64,8 @@ ROC is an important tool for reflecting the overall classifier performance. We p
 The first authentic image dataset is UMD-Blend and the second is FFHQ-Extension. The UMD-Blend is a more diverse dataset, while the FFHQ-Extension shares the image distribution that inspired Nvidia's StyleGAN frameworks.
 In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and comppressed versions of these configurations. 
 
+The performance has been stable and consistent across these experiments. 
+
 <img src="./data/UMD_ROC.png" width="410"> <img src="./data/FFHQ-EXT_ROC.png" width="410">
 
 
@@ -73,14 +75,14 @@ In each case we compare the performance with respect to 4 StyleGAN3 datasets, na
 1. This is Research Code, there is no liability for use or guarantee of performance 
 2. A Docker-based deployment (currently tested on linux based systems, but should be executable on Windows) is most suitable. It supports processing single image or folder of images. The technical demands are relatively low (have docker software installed and run the docker image)
 3. This Software requires access to Nvidia  **GPU** in the computing environment. 
-4. There are incremental improvements beyond what is described. The purpose of this page is to describe how the GAN-Scanner operated in an opem-world upon being frozen in early 2021.
+4. There are incremental improvements beyond what is described. The purpose of this page is to describe how the GAN-Scanner operated in an open-world upon being frozen in early 2021.
 
 
 ## Related Work
 1. [NIST Media Forensic Challenge](https://mfc.nist.gov/#pills-overview)
 2. [Only a Matter of Style: Age Transformation Using a Style-Based Regression Model, SIGGRAPH 2021](https://github.com/yuval-alaluf/SAM)
 3. [Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation, CVPR 2021](https://github.com/eladrich/pixel2style2pixel)
-4. [StyleGAN2 Distillation for Feed-forward Image Manipulation,ECCV2020](https://arxiv.org/abs/2003.03581)
+4. [StyleGAN2 Distillation for Feed-forward Image Manipulation, ECCV2020](https://arxiv.org/abs/2003.03581)
 5. [MobileStyleGAN: A Lightweight Convolutional Neural Network for High-Fidelity Image Synthesis](https://arxiv.org/abs/2104.04767)
 6. [Training Generative Adversarial Networks with Limited Data](https://github.com/NVlabs/stylegan2-ada)
 7. [Image Generators with Conditionally-Independent Pixel Synthesis](https://github.com/saic-mdal/CIPS)
