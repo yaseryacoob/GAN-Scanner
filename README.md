@@ -2,7 +2,7 @@
 
 <img src="./data/seed39942_300_95.jpg" height="270"><img src="./data/seed48305_640_80.jpg" height="270"> <img src="./data/seed48321_384_95.jpg" height="270">
 
-This page describes a %md ###  <span style="color:blue">StyleGAN+</span>  StyleGAN+ image detector developed by [Yaser Yacoob](http://users.umiacs.umd.edu/~yaser) at Computer Vision Lab, University of Maryland, College Park.
+This page describes a <span style="color:blue">StyleGAN+</span>  StyleGAN+ image detector developed by [Yaser Yacoob](http://users.umiacs.umd.edu/~yaser) at Computer Vision Lab, University of Maryland, College Park.
 
 ## Description
 
