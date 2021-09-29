@@ -1,8 +1,9 @@
-## GAN-Scanner- A Detector for Face Images StyleGAN+
+## GAN-Scanner- A Detector for Face of StyleGAN+
 
 <img src="./data/seed39942_300_95.jpg" height="270"><img src="./data/seed48305_640_80.jpg" height="270"> <img src="./data/seed48321_384_95.jpg" height="270">
 
-This page describes a <span style="color:blue">StyleGAN+</span>  StyleGAN+ image detector developed by [Yaser Yacoob](http://users.umiacs.umd.edu/~yaser) at Computer Vision Lab, University of Maryland, College Park.
+This page describes a StyleGAN+  face image detector developed by [Yaser Yacoob](http://users.umiacs.umd.edu/~yaser) at Computer Vision Lab, University of Maryland, College Park.
+A detailed description will be released in a forthcoming paper.
 
 ## Description
 
@@ -51,8 +52,8 @@ For each we provide a no-compression performance as well as an unknown rescaled 
 | [StyleMixing](https://arxiv.org/abs/2003.03581)| StyleGAN2+Pix2pix | 93.4K|42.2%|55.8%| StyleGAN2+Pix2Pix|
 | [MobileStyleGAN](https://arxiv.org/abs/2104.04767)| StyleGAN2-reduced| 5K | 42%|37.8% |StyleGAN2-varient|
 | [CIPS](https://github.com/saic-mdal/CIPS)|GAN|7K|63.2%|76.5%|Non-CNN, positional Encoding|
-| [StyleGAN3-config-r](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|42.1%|82.8%| StyleGAN2+Positional Encoding|
-| [StyleGAN3-config-t](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|42.1%|82.8%| StyleGAN2+Positional Encoding|
+| [StyleGAN3-config-r](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|60.1%|82.8%| StyleGAN2+Positional Encoding|
+| [StyleGAN3-config-t](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|60.1%|82.8%| StyleGAN2+Positional Encoding|
 | [StyleGAN3-config-r_rescale-compression](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|42.1%|66.6%| StyleGAN2+Positional Encoding|
 | [StyleGAN3-config-t_rescale-compression](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|43.2%|65.2%|StyleGAN2+Positional Encoding|
 
