@@ -20,22 +20,22 @@ The classifier was trained on a balanced dataset of 81400 images, 40800 authenti
 Please fill out the [Form](https://docs.google.com/forms/d/e/1FAIpQLSd-q3XZmHlvPxZOP8nwFi8Q8cl4epx8HyWrx5ApOszj8g-wnA/viewform) if you are interested in the software.  Please note that access will be granted 
 to **"image-consuming entities for public interest".** Individuals (including students and researchers), re-packagers, as well as opaque entities will **not**  be granted access. 
 
-For any questions or feedback, please e-mail yaser@umd.edu with the subject [Question about the GAN-Scnanner].
+For any questions or feedback, please e-mail yaser@umd.edu with the subject [Question about the GAN-Scanner].
 
 ## ROC of the GAN-Scanner Classifier
 
-The trained classifier is shown, in the graph below,  under two configurations. The full face configuration assumes that the face is fully visible with a reasonable background area. The second configuration  assumes that the face may be partially obsecured, either due to photo composition or partial occlusion (for example in a multi-person scene). The performance charactersitics deteriorate sightly. From AUC of 0.91 to 0.88. 
+The trained classifier is shown, in the graph below,  under two configurations. The full face configuration assumes that the face is fully visible with a reasonable background area. The second configuration  assumes that the face may be partially occluded, either due to photo composition or partial occlusion (for example in a multi-person scene). The performance characterstics deteriorate sightly. From AUC of 0.91 to 0.88. 
 
 
 ### 
-<img src="./data/GAN_CLASSIFIER.png" width="300">
+<img src="./data/GAN_CLASSIFIER.png" width="450">
 
 ## Open-World Detection Accuracy 
 Several targeted experiments were conducted to determine how GAN-Scanner performs in an open-world environment. Three datasets of real images were used, to assess performance under different/unknown data distributions. 
-[MFC 19-20](https://mfc.nist.gov/#pills-overview) is a NIST collected dataset for Forenisc Analysis. UMD-BLEND is derived from over 50K images (a) IARPA JANUS-CS3 Face Recogniton dataset,
+[MFC 19-20](https://mfc.nist.gov/#pills-overview) is a NIST collected dataset for Forenisc Analysis. UMD-BLEND is derived from over 50K images: (a) IARPA JANUS-CS3 Face Recogniton dataset,
 (b) [FaceBook Fairness Dataset](https://ai.facebook.com/blog/shedding-light-on-fairness-in-ai-with-a-new-data-set),
-(c) Boston and Marine Corp Marathons, flicker-based Dataset (UMD), (d) and Women's March in DC Flicker Dataset (UMD). The UMD dataset is the most diverse, and therefore the best reflection of real world dataset at scale. It covers a few decades of camera technology, subject matter, resolution and image composition.
-Finally, FFHQ-Extension is a 27K images unreleased FFHQ-sourced from Nvidia's original collection (these were released for this specific detection task).
+(c) Boston and Marine Corp Marathons, Flicker-based Dataset (UMD), (d) and Women's March in DC Flicker-based Dataset (UMD). The UMD dataset is the most diverse, and therefore the best reflection of real world data at scale. It covers two decades of camera technology, subject matter, resolution and image composition.
+Finally, FFHQ-Extension is a 27K images previously unreleased, FFHQ-sourced, from Nvidia's original collection (the release is for this specific detection task).
 
 The GAN generators varied, between  StyleGAN2-related algorithms (these strongly operate in the same latent space), mixed or significant variants of StyleGAN2,  non CNN architectures as well as StyleGAN3.
 The following detection accuracy reflects open-world performance of GAN-Scanner. Note that for StyleGAN3 we provide 4 different test results that correspond to two configurations provided by Nvidia, config-r and config-t.
@@ -45,7 +45,7 @@ Two accuracies are reported, **Accuracy-F** and **Accuracy-P** . The former is f
 
 
 | DATASET  | Type  | Data Size | Detection Accuracy-F| Detection Accuracy-P | Notes |
-| :------------ |:------------------|:----|:----|:----|:--------|
+| :------------ |:------------------|:---|:---|:----|:--------|
 | [MFC19-20](https://mfc.nist.gov/#pills-overview)  | Real Data | 7.6K | 95.1%|93.3% | Real-world diversity|
 | UMD-BLEND  | Real Data | 21K | 93.6%|85.0% | Real-world diversity|
 | FFHQ-Extension | Real Data | 27K | 92.7%|86.7% | Real-world diversity|
@@ -61,19 +61,19 @@ Two accuracies are reported, **Accuracy-F** and **Accuracy-P** . The former is f
 
 ## Open-World ROC
 ROC is an important tool for reflecting the overall classifier performance. We provide two experiments that evaluate the classifier on authentic/StyleGAN3 data.
-The first authentic image dataset is UMD-Blend and the second is FFHQ-Extension. The UMD-Blend is more diverse dataset, while the FFHQ-Extension shares the image distribution that inspired Nvidia's StyleGAN frameworks.
-In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and comppressed versions these configurations. 
+The first authentic image dataset is UMD-Blend and the second is FFHQ-Extension. The UMD-Blend is a more diverse dataset, while the FFHQ-Extension shares the image distribution that inspired Nvidia's StyleGAN frameworks.
+In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and comppressed versions of these configurations. 
 
-<img src="./data/UMD_ROC.png" width="400"> <img src="./data/FFHQ-EXT_ROC.png" width="400">
+<img src="./data/UMD_ROC.png" width="420"> <img src="./data/FFHQ-EXT_ROC.png" width="420">
 
 
 
 ## Notes
 
 1. This is Research Code, there is no liability for use or guarantee of performance 
-2. A Docker-based deployment (currently tested on linux based systems) is most suitable. It supports processing single or folders of images.
-3. This Software requires access to **GPU** in the computing environment. 
-4. There are incremental improvements beyond what is described. The purpose of this page is to describe how the open-world GAN-Scanner operated upon being frozen in early 2021.
+2. A Docker-based deployment (currently tested on linux based systems, but should be executable on Windows) is most suitable. It supports processing single image or folder of images. The technical demands are relatively low (have docker software installed and run the docker image)
+3. This Software requires access to Nvidia  **GPU** in the computing environment. 
+4. There are incremental improvements beyond what is described. The purpose of this page is to describe how the GAN-Scanner operated in an opem-world upon being frozen in early 2021.
 
 
 ## Related Work
