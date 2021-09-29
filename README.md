@@ -1,4 +1,4 @@
-## GAN-Scanner- A Detector for Face of StyleGAN+
+## GAN-Scanner: A Detector for Face of StyleGAN+
 
 <img src="./data/seed39942_300_95.jpg" height="270"><img src="./data/seed48305_640_80.jpg" height="270"> <img src="./data/seed48321_384_95.jpg" height="270">
 
@@ -9,7 +9,8 @@ A detailed description will be released in a forthcoming paper.
 
 This detector is designed for faces. It works best at medium and high resolution images (128x128 and higher).
 
-This detector employs StyleGAN2 inversion as the core-idea for detection. The hypothesis is that a perfect inversion of a face is highly likely to be a GAN generated image, while a real-image is slightly less invertable. Multiple metrics are used to compute a feature vector that reflects the quality of the inversion. The computed feature is then classified (0 to 1.0, where 0 is likely a GAN image image and 1.0 is an authentic image). An evidence image is also provided to help a human make a final determination if the processing is credible.
+This detector employs StyleGAN2 inversion as the core-idea for detection. The hypothesis is that a perfect inversion of a face is highly likely to be a GAN generated image, while a real-image is slightly less invertable. Multiple metrics are used to compute a feature vector that reflects the quality of the inversion. The computed feature is then scored (range 0-1.0, where 0 is likely a GAN image image and 1.0 is an authentic image). An evidence image is also provided to help a human make a final determination if the processing is convincing.
+
 
 The classifier was trained on a balanced dataset of 81400 images, 40800 authentic (FFHQ+CELEBHQ) and 40800 GAN generated (5100 from each of StyleGAN2-raw+three compressions levels, 10,25,50, StyleGAN-ADA (inversions of StyleGAN2 and CELEBHQ), StyleGAN2 Distillation and SAM (see references at the bottom).
 
@@ -17,7 +18,7 @@ The classifier was trained on a balanced dataset of 81400 images, 40800 authenti
 ## Request Code or Data 
 
 Please fill out the [Form](https://docs.google.com/forms/d/e/1FAIpQLSd-q3XZmHlvPxZOP8nwFi8Q8cl4epx8HyWrx5ApOszj8g-wnA/viewform) if you are interested in the software.  Please note that access will be granted 
-to ** "image-consuming entities for public interest". ** Individuals (including students and researchers), re-packagers, as well as opaque entities will ** not **  be granted access. 
+to **"image-consuming entities for public interest".** Individuals (including students and researchers), re-packagers, as well as opaque entities will **not**  be granted access. 
 
 For any questions or feedback, please e-mail yaser@umd.edu with the subject [Question about the GAN-Scnanner].
 
@@ -40,12 +41,13 @@ The GAN generators varied, between  StyleGAN2-related algorithms (these strongly
 The following detection accuracy reflects open-world performance of GAN-Scanner. Note that for StyleGAN3 we provide 4 different test results that correspond to two configurations provided by Nvidia, config-r and config-t.
 For each we provide a no-compression performance as well as an unknown rescaled and compressed data that simulates real-world and/or adversarial attacks.
 
+Two accuracies are reported, ** Accuracy-F ** and ** Accuracy-P ** . The former is for a Full-face classifier, and the latter is for Partial (or boundary) face classifier. The results suggest that the Partial Face classifer is preferrable for overall performance.
 
 
-| DATASET  | Type  | Data Size | Detection Accuracy1| Detection Accuracy2 | Notes |
+| DATASET  | Type  | Data Size | Detection Accuracy-F| Detection Accuracy-P | Notes |
 | :------------ |:------------------|:----|:----|:----|:--------|
 | [MFC19-20](https://mfc.nist.gov/#pills-overview)  | Real Data | 7.6K | 95.1%|93.3% | Real-world diversity|
-| [UMD-BLEND](https://mfc.nist.gov/#pills-overview)  | Real Data | 21K | 93.6%|85.0% | Real-world diversity|
+| UMD-BLEND  | Real Data | 21K | 93.6%|85.0% | Real-world diversity|
 | FFHQ-Extension | Real Data | 27K | 92.7%|86.7% | Real-world diversity|
 | [SAM](https://github.com/yuval-alaluf/SAM) | StyleGAN2 |13.8K        |   98.4%|96.4% |  StyleGAN2-latentspace|
 | [NAVIGAN](https://github.com/yandex-research/navigan) | StyleGAN2 | 8.4K | 99.8%|99.2%|StyleGAN2-latentspace|
