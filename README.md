@@ -90,7 +90,9 @@ The performance has been stable and consistent across these experiments.
 9. [Alias-Free Generative Adversarial Networks](https://nvlabs.github.io/alias-free-gan/)
 
 
+## Research Acknowledgement
 
+This work is supported by the US Defense Advanced Research Projects Agency (DARPA) Semantic Forensics (SemaFor) Program under HR001120C0124. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the DARPA.
 
 
 
