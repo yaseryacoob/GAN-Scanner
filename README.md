@@ -48,7 +48,7 @@ The GAN generators varied, between  StyleGAN2-related algorithms (these strongly
 The following detection accuracy reflects open-world performance of GAN-Scanner. Note that for StyleGAN3 we provide 4 different test results that correspond to two configurations provided by Nvidia, config-r and config-t.
 For each we provide a no-compression performance as well as an unknown rescaled and compressed data that simulates real-world and/or adversarial attacks.
 
-Two accuracies are reported, **Accuracy-F** and **Accuracy-P** . The former is for a Full-face classifier, and the latter is for Partial (or boundary) face classifier. The results suggest that the Partial Face classifer is preferrable for overall performance.
+Two accuracies are reported, **Accuracy-F** and **Accuracy-P** . The former is for a Full-face classifier, and the latter is for Partial (or boundary) face classifier. The results suggest that the Partial Face classifer is preferrable for overall performance if we prioritize GAN image detection, while the Full face classifier is better at reducing force alarms.
 
 
 | DATASET  | Type  | Data Size | Detection Accuracy-F| Detection Accuracy-P | Notes |
@@ -69,8 +69,8 @@ Two accuracies are reported, **Accuracy-F** and **Accuracy-P** . The former is f
 
 ## Open-World ROC
 ROC is an important tool for reflecting the overall classifier performance. We provide two experiments that evaluate the classifier on authentic/StyleGAN3 data.
-The first authentic image dataset is UMD-Blend and the second is FFHQ-Extension. The UMD-Blend is a more diverse dataset, while the FFHQ-Extension shares the image distribution that inspired Nvidia's StyleGAN frameworks.
-In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and comppressed versions of these configurations. The c was genrously provided by Nvidia, and the characterstics of these datasets are not known to us. Consequently, this experiment is open-world all around on real and generated face images.
+The first authentic image dataset is UMD-Blend and the second is FFHQ-Extension. The UMD-Blend is a more diverse dataset, while the FFHQ-Extension shares the image distribution that inspired Nvidia's StyleGANs (i.e., 1, 2 and 3) frameworks.
+In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and compressed versions of these configurations. These configurations were  generously provided by Nvidia, and the characterstics of these datasets are not known to us. Consequently, this experiment is  a good proxy for an open-world all around on real and generated face images.
 
 The performance has been stable and consistent across these experiments. 
 
