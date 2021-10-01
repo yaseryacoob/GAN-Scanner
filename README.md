@@ -1,6 +1,6 @@
 ## GAN-Scanner: A Detector for Faces of StyleGAN+
 
-<img src="./data/seed39942_300_95.jpg" height="270"><img src="./data/seed48305_640_80.jpg" height="270"> <img src="./data/seed48321_384_95.jpg" height="270">
+<img src="./data/seed39942_300_95.jpg" height="270"><img src="./data/seed48305_640_80.jpg" height="270"> <img src="./data/seed20025_640_90.jpg" height="270">
 
 This page describes a StyleGAN+  face image detector developed by [Yaser Yacoob](http://users.umiacs.umd.edu/~yaser) at Computer Vision Lab, University of Maryland, College Park.
 A detailed description will be released in a forthcoming paper.
@@ -52,7 +52,8 @@ Two accuracies are reported, **Accuracy-F** and **Accuracy-P** . The former is f
 | [SAM](https://github.com/yuval-alaluf/SAM) | StyleGAN2 |13.8K        |   98.4%|96.4% |  StyleGAN2-latentspace|
 | [NAVIGAN](https://github.com/yandex-research/navigan) | StyleGAN2 | 8.4K | 99.8%|99.2%|StyleGAN2-latentspace|
 | [StyleMixing](https://arxiv.org/abs/2003.03581)| StyleGAN2+Pix2pix | 93.4K|42.2%|55.8%| StyleGAN2+Pix2Pix|
-| [MobileStyleGAN](https://arxiv.org/abs/2104.04767)| StyleGAN2-reduced| 5K | 42%|37.8% |StyleGAN2-varient|
+| [MobileStyleGAN.v1](https://arxiv.org/abs/2104.04767)| StyleGAN2-reduced| 5K | 31.2%|37.8% |StyleGAN2-varient|
+| [MobileStyleGAN.v2](https://arxiv.org/abs/2104.04767)| StyleGAN2-reduced| 5K | 27.1%|35.9% |StyleGAN2-varient|
 | [CIPS](https://github.com/saic-mdal/CIPS)|GAN|7K|63.2%|76.5%|Non-CNN, positional Encoding|
 | [StyleGAN3-config-r](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|60.1%|82.8%| StyleGAN2+Positional Encoding|
 | [StyleGAN3-config-t](https://nvlabs.github.io/alias-free-gan/)|StyleGAN3|20K|60.1%|82.8%| StyleGAN2+Positional Encoding|
@@ -62,7 +63,7 @@ Two accuracies are reported, **Accuracy-F** and **Accuracy-P** . The former is f
 ## Open-World ROC
 ROC is an important tool for reflecting the overall classifier performance. We provide two experiments that evaluate the classifier on authentic/StyleGAN3 data.
 The first authentic image dataset is UMD-Blend and the second is FFHQ-Extension. The UMD-Blend is a more diverse dataset, while the FFHQ-Extension shares the image distribution that inspired Nvidia's StyleGAN frameworks.
-In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and comppressed versions of these configurations. 
+In each case we compare the performance with respect to 4 StyleGAN3 datasets, namely config-r, config-t, and rescaled and comppressed versions of these configurations. The c was genrously provided by Nvidia, and the characterstics of these datasets are not known to us. Consequently, this experiment is open-world all around on real and generated face images.
 
 The performance has been stable and consistent across these experiments. 
 
